@@ -34,6 +34,13 @@ const createTestimonialSchema = () => z.object({
   author: createAuthorSchema()
 })
 
+const createCardSchema = () => z.object({
+  title: z.string(),
+  description: z.string(),
+  icon: z.string().editor({ input: 'icon' }),
+  to: z.string().optional()
+})
+
 export default defineContentConfig({
   collections: {
     index: defineCollection({
@@ -59,8 +66,12 @@ export default defineContentConfig({
             })
           }))
         }),
+        map: createBaseSchema(),
+        skills: createBaseSchema().extend({
+          title: z.string(),
+          items: z.array(createCardSchema())
+        }),
         testimonials: z.array(createTestimonialSchema()),
-        blog: createBaseSchema(),
         faq: createBaseSchema().extend({
           categories: z.array(
             z.object({

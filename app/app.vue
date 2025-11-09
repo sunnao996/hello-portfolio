@@ -19,6 +19,7 @@ useSeoMeta({
   titleTemplate: '行动是治愈焦虑的良药'
 })
 </script>
+
 <template>
   <UApp>
     <NuxtLayout>

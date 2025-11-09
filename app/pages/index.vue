@@ -18,7 +18,17 @@ useSeoMeta({
 </script>
 
 <template>
-  <UPage>
-    <LandingHero :page="page" />
+  <UPage v-if="page">
+    <LandingHero :page />
+    <UPageSection
+      :ui="{
+        container: '!pt-0 lg:grid lg:grid-cols-2 lg:gap-8'
+      }"
+    >
+      <LandingAbout :page />
+      <LandingWorkExperience :page />
+    </UPageSection>
+    <LandingMap :page />
+    <LandingSkills :page />
   </UPage>
 </template>
