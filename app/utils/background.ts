@@ -34,7 +34,7 @@ export const PATTERN_BACKGROUND_VARIANT = {
 
 export const PATTERN_BACKGROUND_SPEED = {
   Default: 10000,
-  Slow: 25000,
+  Slow: 50000,
   Fast: 5000
 } as const
 
