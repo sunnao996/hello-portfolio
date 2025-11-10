@@ -30,5 +30,6 @@ useSeoMeta({
     </UPageSection>
     <LandingMap :page />
     <LandingSkills :page />
+    <LandingTestimonials :page />
   </UPage>
 </template>

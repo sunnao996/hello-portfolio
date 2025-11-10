@@ -69,7 +69,11 @@ export default defineContentConfig({
         map: createBaseSchema(),
         skills: createBaseSchema().extend({
           title: z.string(),
-          items: z.array(createCardSchema())
+          items: z.object({
+            backend: z.array(z.string()),
+            frontend: z.array(z.string()),
+            other: z.array(z.string())
+          })
         }),
         testimonials: z.array(createTestimonialSchema()),
         faq: createBaseSchema().extend({
