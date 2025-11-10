@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import {
+  PATTERN_BACKGROUND_DIRECTION,
+  PATTERN_BACKGROUND_SPEED,
+  PATTERN_BACKGROUND_VARIANT
+} from '@/utils/background'
+
 const colorMode = useColorMode()
 
 const color = computed(() => (colorMode.value === 'dark' ? '#020618' : 'white'))
@@ -28,4 +34,14 @@ useSeoMeta({
       </UMain>
     </NuxtLayout>
   </UApp>
+
+  <!-- 全局背景组件 -->
+  <PatternBackground
+    :animate="true"
+    :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
+    :variant="PATTERN_BACKGROUND_VARIANT.Grid"
+    :speed="PATTERN_BACKGROUND_SPEED.Slow"
+    class="fixed inset-0 -z-10 pointer-events-none"
+    aria-hidden="true"
+  />
 </template>

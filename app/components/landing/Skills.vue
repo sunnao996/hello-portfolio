@@ -16,6 +16,7 @@ defineProps<{
   >
     <UPageColumns>
       <UMarquee
+        :overlay="false"
         orientation="vertical"
         class="max-h-[400px]"
         pause-on-hover
@@ -28,6 +29,7 @@ defineProps<{
         />
       </UMarquee>
       <UMarquee
+        :overlay="false"
         orientation="vertical"
         class="max-h-[400px]"
         pause-on-hover
@@ -40,6 +42,7 @@ defineProps<{
         />
       </UMarquee>
       <UMarquee
+        :overlay="false"
         orientation="vertical"
         class="max-h-[400px]"
         pause-on-hover
