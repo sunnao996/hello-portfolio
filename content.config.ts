@@ -34,13 +34,6 @@ const createTestimonialSchema = () => z.object({
   author: createAuthorSchema()
 })
 
-const createCardSchema = () => z.object({
-  title: z.string(),
-  description: z.string(),
-  icon: z.string().editor({ input: 'icon' }),
-  to: z.string().optional()
-})
-
 export default defineContentConfig({
   collections: {
     index: defineCollection({
